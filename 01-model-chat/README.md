@@ -15,3 +15,8 @@ python main.py
 ```
 
 程序会提示用户输入问题，输入 `exit` 可以结束程序。
+
+
+HumanMessage 的 role为user
+AIMessage 的 role为assistant
+SystemMessage 的 role为system
