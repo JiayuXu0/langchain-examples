@@ -19,6 +19,7 @@ model = init_chat_model(
     api_key=api_key
 )
 
+# 第一种构建历史对话的方法
 messages = [
     SystemMessage("Translate the following from English into Italian"),
     HumanMessage("hi!"),
@@ -35,6 +36,7 @@ system_message_prompt = SystemMessagePromptTemplate.\
                         from_template(system_template)
 human_message_prompt = HumanMessagePromptTemplate.from_template("{text}")
 
+# 第二种构建历史对话的方法
 prompt_template = ChatPromptTemplate.from_messages(
     [system_message_prompt, human_message_prompt]
 )
