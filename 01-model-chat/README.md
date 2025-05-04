@@ -61,6 +61,23 @@ prompt_template = ChatPromptTemplate.from_messages(
 prompt = prompt_template.invoke({"language": "Italian", "text": "hi!"})
 ```
 
+### 方式四：直接通过[]和()构建
+
+```python
+ChatPromptTemplate.from_messages(
+    [
+        (
+            "system",
+            "You are an expert extraction algorithm. "
+            "Only extract relevant information from the text. "
+            "If you do not know the value of an attribute asked to extract, "
+            "return null for the attribute's value.",
+        ),
+        ("human", "{text}"),
+    ]
+)
+```
+
 ## 使用提示
 
 - 在交互界面中直接输入您的问题
